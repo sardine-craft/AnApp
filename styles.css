@@ -1,0 +1,20 @@
+body {
+    background-color: var(--modern-bg-color);
+    color: rgb(196, 90, 190);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 16vmax;
+    text-decoration: underline;
+}
+
+span {
+    color: rgb(218, 148, 214);
+}
+
+:root {
+    --modern-bg-color: rgb(48, 32, 66);
+}
+
