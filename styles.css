@@ -5,10 +5,18 @@ body {
     text-align: center;
 }
 
+p {
+    font-size: 4vmax;
+    border-left: 2px solid rgb(218, 148, 214);
+
+}
+
+
 h1 {
     font-size: 16vmax;
     text-decoration: underline;
 }
+
 
 span {
     color: rgb(218, 148, 214);
