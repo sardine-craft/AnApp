@@ -24,6 +24,7 @@ span {
 
 a {
     color: var(--modern-pink-color);
+    font-size: 2vmax;
     text-decoration: none;
     font-weight: lighter;
     transition: 1s;
