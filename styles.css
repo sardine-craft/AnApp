@@ -6,7 +6,8 @@ body {
 }
 
 p {
-    font-size: 4vmax;
+    font-size: 3vmax;
+    font-weight: lighter;
 }
 
 
@@ -17,10 +18,33 @@ h1 {
 
 
 span {
-    color: rgb(218, 148, 214);
+    color: var(--modern-pink-color);
+}
+
+a {
+    color: var(--modern-pink-color);
+    text-decoration: none;
+    font-weight: lighter;
+    transition: 1s;
+}
+
+a:hover {
+    letter-spacing: 0.1vmax;
+}
+
+a:visited {
+    background-color: var(--modern-darkpink-color);
 }
 
 :root {
     --modern-bg-color: rgb(48, 32, 66);
+    --modern-pink-color: rgb(218, 148, 214);
+    --modern-darkpink-color: rgb(196, 90, 190);
+}
+
+::selection {
+    background-color: var(--modern-darkpink-color);
+    color: var(--modern-bg-color);
+
 }
 
