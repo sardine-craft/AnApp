@@ -28,7 +28,7 @@ function getTheAPIs(arkgs) {
         para.setAttribute("target", "_none");
 
         //add html to para
-        para.innerHTML = n + ". " + igg.API + " - " + igg.Description + " - Base link: " + igg.Link;
+        para.innerHTML = n + ". " + igg.API + " - " + igg.Description + " - " + igg.Link;
 
         //append para to APIs.
         APIs.appendChild(para);

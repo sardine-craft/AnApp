@@ -3,7 +3,18 @@ body {
     color: rgb(196, 90, 190);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    line-height: 4vmin;
 }
+
+body::-webkit-scrollbar {
+    background-color: var(--modern-bg-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--modern-darkpink-color);
+    border-radius: 2px;
+}
+
 
 p {
     font-size: 3vmax;
@@ -24,7 +35,7 @@ span {
 
 a {
     color: var(--modern-pink-color);
-    font-size: 2vmax;
+    font-size: 1vmax;
     text-decoration: none;
     font-weight: lighter;
     transition: 1s;
@@ -32,6 +43,7 @@ a {
 
 a:hover {
     letter-spacing: 0.1vmax;
+    font-size: 1.2vmax;
 }
 
 a:visited {
