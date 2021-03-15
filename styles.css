@@ -18,7 +18,8 @@ h1 {
 
 
 span {
-    color: var(--modern-pink-color);
+    color: var(--modern-darkpink-color);
+    font-size: 4vmax;
 }
 
 a {
@@ -40,6 +41,7 @@ a:visited {
     --modern-bg-color: rgb(48, 32, 66);
     --modern-pink-color: rgb(218, 148, 214);
     --modern-darkpink-color: rgb(196, 90, 190);
+    --modern-darkpurple-color: rgb(34, 24, 46);
 }
 
 ::selection {
