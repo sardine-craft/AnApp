@@ -54,6 +54,35 @@ a:visited {
     background-color: var(--modern-darkpink-color);
 }
 
+#devPeople {
+    background-color: var(--modern-darkpurple-color);
+    border-radius: 2px;
+    width: 80vmax;
+    margin: 0 auto;
+}
+
+#ianProfile {
+    background-color: var(--modern-darkpurple-color);
+    border-radius: 2px;
+    padding: 10vmax;
+    margin: 0 auto;
+}
+
+#colinProfile {
+    background-color: var(--modern-darkpurple-color);
+    border-radius: 2px;
+    padding: 10vmax;
+    margin: 0 auto;
+}
+
+.pic {
+    background-color: var(--modern-pink-color);
+    border-radius: 50%;
+    height: 16vmax;
+    width: 16vmax;
+    margin: 0 auto;
+}
+
 :root {
     --modern-bg-color: rgb(48, 32, 66);
     --modern-pink-color: rgb(218, 148, 214);
