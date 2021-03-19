@@ -19,16 +19,45 @@ body::-webkit-scrollbar-thumb {
     border-radius: 2px;
 }
 
+input[type="text"] {
+    background-color: var(--modern-darkpurple-color);
+    color: var(--modern-darkpink-color);
+    font-size: 4vmax;
+    font-weight: lighter;
+    text-align: center;
+    padding: 2%;
+    scroll-padding: 100px;
+    width: 40vw;
+    height: 4vh;
+    border: none;
+    border-radius: 2px;
+
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color:rgb(196, 90, 190);
+    opacity: 0.5;
+}
+
+input[type="text"]:hover::placeholder {
+    opacity: 1;
+}
 
 p {
     font-size: 3vmax;
     font-weight: lighter;
+    animation: load 1s;
 }
 
 
 h1 {
     font-size: 16vmax;
     text-decoration: underline;
+    animation: load 1s;
 }
 
 
@@ -57,7 +86,8 @@ a:visited {
 #devPeople {
     background-color: var(--modern-darkpurple-color);
     border-radius: 2px;
-    width: 60vmax;
+    width: 40vw;
+    line-height: initial;
     margin: 0 auto;
 }
 
@@ -88,6 +118,7 @@ a:visited {
     --modern-pink-color: rgb(218, 148, 214);
     --modern-darkpink-color: rgb(196, 90, 190);
     --modern-darkpurple-color: rgb(34, 24, 46);
+    --link-size: 1vmax;
 }
 
 ::selection {
@@ -96,3 +127,7 @@ a:visited {
 
 }
 
+@keyframes load {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

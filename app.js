@@ -10,31 +10,15 @@ function getTheAPIs(arkgs) {
 
     //say number of APIs
     document.getElementById("APINumber").innerHTML = arkgs.count;
- 
-    //declare var to keep track of APIs
-    var n = 1;
+    //render
+    render(APIs, arkgs.entries);
 
-    //add every API to APIs
-    for (let igg of arkgs.entries) {
-        //declare variables
-        let para = document.createElement("a");
-        let breack = document.createElement("br");
+    var input = document.getElementById("searchBar");
 
-        //add a break
-        APIs.appendChild(breack);
+    input.addEventListener("keyup", function (e) {
+        APIs.innerHTML = "";
+        render(APIs, arkgs.entries, e.target.value);
+    });
 
-        //give para attributes
-        para.setAttribute("href", igg.Link);
-        para.setAttribute("target", "_none");
-
-        //add html to para
-        para.innerHTML = n + ". " + igg.API + " - " + igg.Description + " - " + igg.Link;
-
-        //append para to APIs.
-        APIs.appendChild(para);
-
-        //positively change API number
-        n++;
-    }
 
 }
