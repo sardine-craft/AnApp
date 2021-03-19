@@ -13,7 +13,7 @@ function render(container, entries, query) {
         //this is the APIs value
         const text = (igg.API + " " + igg.Description).toLowerCase();
         //say number of APIs
-        document.getElementById("APINumber").innerHTML = n - 1;
+        document.getElementById("APINumber").innerHTML = n;
 
         if (queryArray.length === 0 || queryArray.every(qa => text.indexOf(qa) > -1)) {
             //declare variables
