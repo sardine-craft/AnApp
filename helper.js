@@ -1,8 +1,8 @@
 function render(container, entries, query) {
     //this is the query
     let queryArray = (query || "").toLowerCase()
-        .split(/\s/)
-        .filter(x => x);
+                                   .split(/\s/)
+                                   .filter(x => x);
 
     //declare var to keep track of APIs
     var n = 1;
@@ -34,7 +34,9 @@ function render(container, entries, query) {
             container.appendChild(para);
 
             //positively change API number
-            n++;
+            n += 1;
+        } else {
+            n = 0;
         }
     }
 }
