@@ -1,21 +1,20 @@
 function render(container, entries, query) {
     //this is the query
     let queryArray = (query || "").toLowerCase()
-                                   .split(/\s/)
-                                   .filter(x => x);
+        .split(/\s/)
+        .filter(x => x);
 
     //declare var to keep track of APIs
-    var n = 1;
+    var n = 0;
 
     //add every API to APIs
     for (let igg of entries) {
 
         //this is the APIs value
         const text = (igg.API + " " + igg.Description).toLowerCase();
-        //say number of APIs
-        document.getElementById("APINumber").innerHTML = n;
 
         if (queryArray.length === 0 || queryArray.every(qa => text.indexOf(qa) > -1)) {
+
             //declare variables
             let para = document.createElement("a");
             let breack = document.createElement("br");
@@ -28,15 +27,21 @@ function render(container, entries, query) {
             para.setAttribute("target", "_none");
 
             //add html to para
-            para.innerHTML = n + ". " + igg.API + " - " + igg.Description + " - " + igg.Link;
+            para.innerHTML = (n + 1) + ". " + igg.API + " - " + igg.Description + " - " + igg.Link;
 
             //append para to APIs.
             container.appendChild(para);
 
             //positively change API number
             n += 1;
-        } else {
-            n = 0;
+
+            //say number of APIs
+            document.getElementById("APINumber").innerHTML = n;
+            
+        } else if (n === 0) {
+            document.getElementById("APINumber").innerHTML = "None found"
         }
+
     }
+
 }
