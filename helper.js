@@ -32,6 +32,9 @@ function render(container, entries, query) {
 
             //positively change API number
             n++;
+
+            //say number of APIs
+            document.getElementById("APINumber").innerHTML = n - 1;
         }
     }
 }

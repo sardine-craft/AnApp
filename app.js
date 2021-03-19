@@ -8,8 +8,6 @@ function getTheAPIs(arkgs) {
     //add a handle to the-stuff (APIs)
     let APIs = document.getElementById("the-stuff");
 
-    //say number of APIs
-    document.getElementById("APINumber").innerHTML = arkgs.count;
     //render
     render(APIs, arkgs.entries);
 
