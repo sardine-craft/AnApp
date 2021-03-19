@@ -1,5 +1,5 @@
 function render(container, entries, query) {
-
+    //this is the query
     let queryArray = (query || "").toLowerCase()
                                    .split(/\s/)
                                    .filter(x => x);
@@ -10,7 +10,10 @@ function render(container, entries, query) {
     //add every API to APIs
     for (let igg of entries) {
 
+        //this is the APIs value
         const text = (igg.API + " " + igg.Description).toLowerCase();
+                //say number of APIs
+                document.getElementById("APINumber").innerHTML = n - 1;
 
         if (queryArray.length === 0 || queryArray.every(qa => text.indexOf(qa) > -1)) {
             //declare variables
@@ -32,9 +35,6 @@ function render(container, entries, query) {
 
             //positively change API number
             n++;
-
-            //say number of APIs
-            document.getElementById("APINumber").innerHTML = n - 1;
         }
     }
 }
