@@ -1,6 +1,6 @@
 fetch("https://api.publicapis.org/entries")
-.then(response => response.json())
-.then(getTheAPIs);
+    .then(response => response.json())
+    .then(getTheAPIs);
 
 function getTheAPIs(arkgs) {
     //log Agks
