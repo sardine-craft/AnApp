@@ -31,6 +31,8 @@ input[type="text"] {
     height: 4vh;
     border: none;
     border-radius: 2px;
+    overflow: hidden;
+    transition: 0.4s;
 
 }
 
@@ -74,13 +76,13 @@ a {
     transition: 1s;
 }
 
+a:visited {
+    color: var(--modern-darkpink-color)
+}
+
 a:hover {
     letter-spacing: 0.1vmax;
     font-size: 1.2vmax;
-}
-
-a:visited {
-    background-color: var(--modern-darkpink-color);
 }
 
 #devPeople {
