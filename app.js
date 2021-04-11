@@ -20,3 +20,7 @@ function getTheAPIs(arkgs) {
 
 
 }
+
+document.getElementById("filters_toggle")
+        .addEventListener("click",
+                          filterAccordionEventListener);

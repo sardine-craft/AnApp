@@ -19,7 +19,15 @@
     <h1>An<span style="font-size: inherit; color: var(--modern-pink-color);">App</span></h1>
     <p>Find APIs</p>
 
-    <input type="text" id="searchBar" placeholder="Search APIs   ">
+    <div>
+        <input type="text" id="searchBar" placeholder="Search APIs   ">
+        <input type="button" value="⬇" id="filters_toggle">
+        <div id="filters_container" class="closed">
+            Doesn't Requires Auth<br />
+            Requires Auth<br />
+            Bob
+        </div>
+    </div>
 
     <p>-</p>
 

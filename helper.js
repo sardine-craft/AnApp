@@ -45,3 +45,26 @@ function render(container, entries, query) {
     }
 
 }
+
+/**
+ * @param {Event} e 
+ */
+function filterAccordionEventListener(e) {
+    /**
+     * @type {HTMLButtonElement}
+     */
+    const btn = e.target;
+
+    /**
+     * @type {HTMLDivElement}
+     */
+    const filters_container = document.getElementById("filters_container");
+
+    if (btn.value === "⬇") {
+        btn.value = "⬆";
+        filters_container.className = "opened";
+    } else {
+        btn.value = "⬇"
+        filters_container.className = "closed";
+    }
+}

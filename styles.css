@@ -121,6 +121,7 @@ a:hover {
     --modern-darkpink-color: rgb(196, 90, 190);
     --modern-darkpurple-color: rgb(34, 24, 46);
     --link-size: 1vmax;
+    --big-font-size: 4vmax;
 }
 
 ::selection {
@@ -132,4 +133,29 @@ a:hover {
 @keyframes load {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+#filters_toggle {
+    background-color: var(--modern-bg-color);
+    color: var(--modern-pink-color);
+    font-size: var(--big-font-size);
+    border: none;
+    cursor: pointer;
+}
+
+#filters_container {
+    width: 40vw;
+    margin: 0 auto;
+    background-color: var(--modern-darkpurple-color);
+    padding: 4%;
+    border-radius: 0 0 20px 20px;
+    border-top: 2px solid var(--modern-darkpink-color);
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+#filters_container.closed {
+    height: 0;
+    padding: 0;
+    width: 0;
 }
