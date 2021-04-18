@@ -8,6 +8,7 @@ body {
 
 body::-webkit-scrollbar {
     background-color: var(--modern-bg-color);
+    z-index: 3;
 }
 
 body::-webkit-scrollbar:hover {
@@ -17,6 +18,17 @@ body::-webkit-scrollbar:hover {
 body::-webkit-scrollbar-thumb {
     background-color: var(--modern-darkpink-color);
     border-radius: 2px;
+}
+
+#loadDisplay {
+    display: initial; 
+    background-color: var(--modern-darkpurple-color); 
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 4;
 }
 
 input[type="text"] {
@@ -135,6 +147,7 @@ a:hover {
     100% {opacity: 1;}
 }
 
+
 #filters_toggle {
     background-color: var(--modern-bg-color);
     color: var(--modern-pink-color);
@@ -143,19 +156,45 @@ a:hover {
     cursor: pointer;
 }
 
-#filters_container {
+#regimal {
+    height: initial;
+    white-space: nowrap;
     width: 40vw;
+}
+
+#filters_container {
     margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 0 0 20px 20px;
+    width: 40vw;
+    height: 11vw;
     background-color: var(--modern-darkpurple-color);
     padding: 4%;
-    border-radius: 0 0 20px 20px;
     border-top: 2px solid var(--modern-darkpink-color);
-    overflow: hidden;
-    transition: 0.4s;
+    white-space: nowrap;
+}
+
+#filters_container.opened {
+    animation: toggleOut 1s;
 }
 
 #filters_container.closed {
-    height: 0;
+    animation: toggleIn 1s;
+    height: 0vw;
+    width: 0vw;
     padding: 0;
-    width: 0;
 }
+
+@keyframes toggleOut {
+    0% {width: 0vw; height: 0; padding: 0% 4% 0% 4%; }
+    20% {width: 40vw; height: 0; padding: 0% 4% 0% 4%;  }
+    100% {width: 40vw; height: 11vw; padding: 4% 4% 4% 4%; }
+  }
+
+  @keyframes toggleIn {
+    0% {width: 40vw; height: 11vw; padding: 4% 4% 4% 4%; }
+    20% {width: 40vw; height: 0; padding: 0% 4% 0% 4%; }
+    100% {width: 0; height: 0; padding: 0; }
+    
+  }

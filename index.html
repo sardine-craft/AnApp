@@ -13,9 +13,15 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <script>setTimeout(loadPageContent, 2000)</script>
 </head>
 
 <body>
+    <div id="loadDisplay">
+        <h1 style="color: var(--modern-bg-color); text-decoration: underline;">AnApp</h1>
+        <h2 style="color: var(--modern-bg-color);">Loading...</h2>
+    </div>
     <h1>An<span style="font-size: inherit; color: var(--modern-pink-color);">App</span></h1>
     <p>Find APIs</p>
 
@@ -23,9 +29,11 @@
         <input type="text" id="searchBar" placeholder="Search APIs   ">
         <input type="button" value="⬇" id="filters_toggle">
         <div id="filters_container" class="closed">
+            <div id="regimal">
             Doesn't Requires Auth<br />
             Requires Auth<br />
             Bob
+            </div>
         </div>
     </div>
 

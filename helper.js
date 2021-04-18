@@ -46,6 +46,11 @@ function render(container, entries, query) {
 
 }
 
+function loadPageContent () {
+    let loadItem = document.getElementById("loadDisplay");
+    loadItem.style.display = "none";
+}
+
 /**
  * @param {Event} e 
  */
