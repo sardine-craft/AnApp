@@ -39,7 +39,7 @@ function render(container, entries, query) {
             document.getElementById("APINumber").innerHTML = n;
             
         } else if (n === 0) {
-            document.getElementById("APINumber").innerHTML = "None found"
+            document.getElementById("APINumber").innerHTML = "None found";
         }
 
     }
